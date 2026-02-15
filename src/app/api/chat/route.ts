@@ -13,11 +13,11 @@ export async function POST(req: Request) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        "model": "google/gemini-2.0-flash-001",
+        "model": "google/gemini-3-flash-preview",
         "messages": [
           {
             "role": "system",
-            "content": "You are a helpful assistant for Strong Safety Systems, a fire fighting and pump service company. You provide information about fire suppression systems, pump installations, and emergency services. Be professional and safety-oriented."
+            "content": "You are a helpful assistant for Strong Safety Systems, a fire fighting and pump service company. You speak in both English and Arabic. You provide information about fire suppression systems, pump installations, and emergency services. Be professional and safety-oriented. Start by saying: 'Hi, how can I help you today?' # Keep respnses short and concise."
           },
           ...messages
         ],
