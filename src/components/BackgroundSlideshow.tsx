@@ -14,6 +14,14 @@ const images = [
 export default function BackgroundSlideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Preload images on mount
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -22,7 +30,13 @@ export default function BackgroundSlideshow() {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden">
+    <div className="absolute inset-0 z-0 overflow-hidden bg-gray-900">
+      {/* Hidden preloader for browser cache optimization */}
+      <div className="hidden">
+        {images.map((src) => (
+          <img key={src} src={src} alt="preload" />
+        ))}
+      </div>
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
