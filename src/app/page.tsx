@@ -145,14 +145,14 @@ export default function LandingPage() {
                 </button>
 
                 <a 
-                  href="mailto:inquiries@strongsafetysystems.com"
+                  href="mailto:sales@strongsafetysystems.com"
                   className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow group"
                 >
                   <div className="p-3 rounded-full bg-blue-50 text-blue-600 mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <Mail className="h-6 w-6" />
                   </div>
                   <h3 className="font-bold text-gray-900">{t('contact_email')}</h3>
-                  <p className="text-sm text-gray-600 mt-1">inquiries@strongsafetysystems.com</p>
+                  <p className="text-sm text-gray-600 mt-1">sales@strongsafetysystems.com</p>
                 </a>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-600">
                   <Mail className="h-4 w-4 text-red-600" />
-                  <span>inquiries@strongsafetysystems.com</span>
+                  <span>sales@strongsafetysystems.com</span>
                 </li>
               </ul>
             </div>
