@@ -109,29 +109,57 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 mb-12">{t('contact_title')}</h2>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 w-full">
-                <a 
-                  href="tel:+996570070254"
-                  className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow group"
-                >
-                  <div className="p-3 rounded-full bg-green-50 text-green-600 mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                <div className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow group">
+                  <div className="p-3 rounded-full bg-red-50 text-red-600 mb-4">
                     <Phone className="h-6 w-6" />
                   </div>
-                  <h3 className="font-bold text-gray-900">{t('contact_call')}</h3>
-                  <p className="text-sm text-gray-600 mt-1" dir="ltr">+996 57 007 0254</p>
-                </a>
-
-                <a 
-                  href="https://wa.me/996570070254"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow group"
-                >
-                  <div className="p-3 rounded-full bg-emerald-50 text-emerald-600 mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                    <MessageCircle className="h-6 w-6" />
+                  <h3 className="font-bold text-gray-900">{t('contact_call')} 1</h3>
+                  <p className="text-sm text-gray-600 mt-1 mb-4" dir="ltr">+966 57 007 0254</p>
+                  <div className="flex gap-3 w-full">
+                    <a 
+                      href="tel:+966570070254"
+                      className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 transition-colors"
+                    >
+                      <Phone className="h-4 w-4" />
+                      {t('contact_call')}
+                    </a>
+                    <a 
+                      href="https://wa.me/966570070254"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp
+                    </a>
                   </div>
-                  <h3 className="font-bold text-gray-900">{t('contact_whatsapp')}</h3>
-                  <p className="text-sm text-gray-600 mt-1">WhatsApp</p>
-                </a>
+                </div>
+
+                <div className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow group">
+                  <div className="p-3 rounded-full bg-red-50 text-red-600 mb-4">
+                    <Phone className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-bold text-gray-900">{t('contact_call')} 2</h3>
+                  <p className="text-sm text-gray-600 mt-1 mb-4" dir="ltr">+966 54 410 6106</p>
+                  <div className="flex gap-3 w-full">
+                    <a 
+                      href="tel:+966544106106"
+                      className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 transition-colors"
+                    >
+                      <Phone className="h-4 w-4" />
+                      {t('contact_call')}
+                    </a>
+                    <a 
+                      href="https://wa.me/966544106106"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
 
                 <button 
                   onClick={() => chatbotRef.current?.open()}
@@ -186,7 +214,11 @@ export default function LandingPage() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-sm text-gray-600">
                   <Phone className="h-4 w-4 text-red-600" />
-                  <span dir="ltr" className="inline-block">+996 57 007 0254</span>
+                  <span dir="ltr" className="inline-block">+966 57 007 0254</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-gray-600">
+                  <Phone className="h-4 w-4 text-red-600" />
+                  <span dir="ltr" className="inline-block">+966 54 410 6106</span>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-600">
                   <Mail className="h-4 w-4 text-red-600" />
